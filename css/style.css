@@ -143,9 +143,17 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 .page {
     flex: 1 1 auto;
 }
-/*---MAIN-BLOCK-------------------------------------*/
+
 .page__main-block {
 }
+
+.page__services {
+    margin: -111px 0 0 0;
+    position: relative;
+    z-index: 2;
+}
+/*---MAIN-BLOCK-------------------------------------*/
+
 
 .main-block {
     position: relative;
@@ -158,27 +166,94 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     padding: 184px 0 191px 0;
     position: relative;
     z-index: 2;
+    max-width: 400px; /* differs from the mockup so that text could be broken*/
+}
+
+@media (max-width: 992px) {
+    .main-block__body {
+        padding: 120px 0 191px 0; /*occupies free space to not to leave behind blank spots */
+    }
+    }
+
+.main-block__body > *:not(:last-child) {
+    margin: 0 0 35px 0;
 }
 
 .main-block__title {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: calc(80 / 58 * 100%);
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 479px) {
+    .main-block__title {
+        font-size: 42px;
+    }
 }
 
 .main-block__text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(30 / 20 * 100%);
+    color:#737373;
+    letter-spacing: 0.2px;
 }
 
-.main-block__buttons {
+@media (max-width: 479px) {
+    .main-block__text {
+        color: #4e4c4c; /*improves readability on a mobile screen*/
+    }
+}
+
+.main-block__button-set {
 }
 
 .main-block__button-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
 }
 
 .main-block__button-item {
+    margin: 10px 0;
+}
+
+@media (max-width: 479px) {
+    .main-block__button-item {
+        flex: 1 1 100%; /*enlarges the buttons when max-width is 379px */
+    }
+}
+
+@media (min-width: 479px) {
+.main-block__button-item:not(:last-child) {
+    margin-right: 10px;
+}
 }
 
 .main-block__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 36px;
+    min-height: 48px;
+
+    border-radius: 37px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(28 / 14 * 100%);
+    letter-spacing: 0.2px;
+    text-align: center;
+    background-color: #FF7B47;
+    color: #FFFFFF;
 }
 
-.main-block__button.main-block__button-border {
+
+
+.main-block__button-border {
+    color: #0D5C63;
+    border: 1px solid #0D5C63;
+    background-color: transparent;
 }
 
 .main-block__image {
@@ -189,6 +264,88 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     left: 0;
 }
 
+@media (max-width: 1300px) {
+.main-block__image img {
+object-position: right; /* helps the image to convey the intended context by adjusting picture*/
+}
+}
+
+@media (max-width: 992px) {
+    .main-block__image img {
+        opacity: 0.5; /*allows the hero title to be readable*/
+    }
+    }
+
 /*---FOOTER-------------------------------------*/
 .footer {
+}
+
+/*---CARD PALETTE-------------------------------------*/
+.services {
+}
+
+.services__container{
+}
+
+.services__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px; /*in charge of flex-items margins*/
+}
+
+.services__column {
+    padding: 0 15px; /*in charge of flex-items margins*/
+    flex: 0 1 33.333%; /*in charge of flex-items margins*/
+    margin: 0 0 30px 0;
+}
+
+@media (max-width: 992px) {
+    .services__column {
+        flex: 0 1 50%;
+    }
+}
+
+.services__item {
+    box-shadow: 0px 13px 19px 0px #00000012;
+    background-color: #FFFFFF;
+    height: 100%;
+    padding: 35px;
+}
+.item-service {
+   
+}
+
+.item-service_green {
+    background-color: #0D5C63;
+
+}
+
+.item-service_green .item-service__title {
+    color: #FFFFFF;
+}
+
+.item-service_green .item-service__text {
+    color: #FFFFFF;
+}
+
+.item-service > *:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.item-service__icon {
+}
+
+.item-service__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(32 / 24 * 100%);
+    letter-spacing: 0.1px;
+}
+
+.item-service__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(20 / 14 * 100%);
+    letter-spacing: 0.2px;
+    color: #737373;
 }
