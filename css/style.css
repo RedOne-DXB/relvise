@@ -25,6 +25,7 @@ line-height: 1;
 font-size: 14px;
 font-weight: 500;
 color:#252B42;
+background-color: #FAFAFA;
 -ms-text-size-adjust: 100%;
 -moz-text-size-adjust: 100%;
 -webkit-text-size-adjust: 100%;
@@ -154,6 +155,29 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 }
 
 .page__advantages {
+}
+
+/*---HEADER-BLOCK-------------------------------------*/
+
+.header-block {
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.header-block__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(57 / 40 * 100%);
+}
+
+.header-block__title:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.header-block__sub-title {
+    font-weight: 500;
+    line-height: calc(20 / 14 * 100%);
+    color:  #737373;
 }
 /*---MAIN-BLOCK-------------------------------------*/
 
@@ -346,13 +370,6 @@ object-position: right; /* helps the image to convey the intended context by adj
     }
 }
 
-@media (min-width: 992px) {
-    .services__item {
-        height: 100%;
-    }
-}
-
-
 .item-service {
    
 }
@@ -393,31 +410,62 @@ object-position: right; /* helps the image to convey the intended context by adj
 }
 
 /*---ADVANTAGES-------------------------------------*/
-
-
-.advantages__header.header-block {
+.advantages {
+    padding: 80px 0;
 }
 
-.header-block__title {
-}
-
-.header-block__sub-title {
+.advantages__header {
+    margin: 0 0 50px 0;
 }
 
 .advantages__body {
+    display: flex;
+    margin: 0 -15px;
 }
 
+@media (max-width: 1020px) {
+    .advantages__body {
+        flex-wrap: wrap;
+    }
+}
+
+
 .advantages__column {
+    padding: 0 15px;
+    flex: 0 1 25%;
+}
+
+@media screen and (min-width: 768px), screen and (max-width: 1020px) {
+    .advantages__column {
+        flex: 0 1 50%;
+    }
 }
 
 .advantages__item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.advantages__item > *:not(:last-child) {
+    margin: 0 0 10px 0;
 }
 
 .advantages__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-end; /*squeezes icons to the left side to equal cards' height*/
+    justify-content: center; /*aligns all flex items */
 }
 
 .advantages__value {
+    font-size: 40px;
+    line-height: calc(57 / 40 * 100%);
 }
 
 .advantages__text {
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+    color: #737373;
 }
