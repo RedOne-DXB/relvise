@@ -152,6 +152,9 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     position: relative;
     z-index: 2;
 }
+
+.page__advantages {
+}
 /*---MAIN-BLOCK-------------------------------------*/
 
 
@@ -387,4 +390,34 @@ object-position: right; /* helps the image to convey the intended context by adj
     line-height: calc(20 / 14 * 100%);
     letter-spacing: 0.2px;
     color: #737373;
+}
+
+/*---ADVANTAGES-------------------------------------*/
+
+
+.advantages__header.header-block {
+}
+
+.header-block__title {
+}
+
+.header-block__sub-title {
+}
+
+.advantages__body {
+}
+
+.advantages__column {
+}
+
+.advantages__item {
+}
+
+.advantages__icon {
+}
+
+.advantages__value {
+}
+
+.advantages__text {
 }
