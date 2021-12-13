@@ -160,6 +160,9 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 .page__practice {
 }
 
+.page__whoweare {
+}
+
 /*---HEADER-BLOCK-------------------------------------*/
 
 .header-block {
@@ -642,4 +645,167 @@ object-position: right; /* helps the image to convey the intended context by adj
 .item-practice__image {
     display: block;
     padding: 0 0 60% 0;
+}
+
+/*---WHO WE ARE-------------------------------------*/
+.whoweare{
+    padding: 80px 0 130px 0;
+}
+
+@media (max-width: 950px) {
+    .whoweare {
+        padding: 50px 0 50px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .whoweare {
+        padding: 20px 0 50px 0;
+    }
+}
+
+.whoweare__container {
+}
+
+.whoweare__header {
+    margin: 0 0 100px 0;
+}
+
+@media (max-width: 950px) {
+    .whoweare__header {
+        margin: 0 0 30px 0;
+    }
+}
+
+.whoweare__body {
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (max-width: 950px) {
+    .whoweare__body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.whoweare__video {
+    flex: 0 0 57%;
+    position: relative;
+    padding: 0 0 42.25% 0; /*percentage calculated from the container's dimension 1046px*/
+}
+
+@media (max-width: 950px) {
+    .whoweare__video {
+        padding: 0 0 56.25% 0; /*given youtube resolution 315 / 560 = 0.5625*/
+    }
+    .whoweare__video:not(:last-child) {
+        margin: 0 0 50px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .whoweare__video:not(:last-child) {
+        margin: 0 0 30px 0;
+    }
+}
+
+.whoweare__video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.whoweare__content {
+    flex: 1 1 auto; /* in the event video is removed this content will occupy the whole container*/
+    padding: 20px 0 0 121px;
+}
+
+@media (max-width: 1080px) {
+    .whoweare__content {
+        padding: 0 0 0 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .whoweare__content {
+        padding: 0;
+    }
+}
+
+.whoweare__title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: calc(57 / 40 * 100%);
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 950px) {
+    .whoweare__title {
+        font-size: 24px;
+    }
+}
+
+.whoweare__title:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.whoweare__text {
+    font-weight: 500;
+    line-height: calc(20 / 14 * 100%);
+    color: #737373;
+    margin: 0 0 50px 0;
+}
+
+@media (max-width: 767px) {
+    .whoweare__text {
+        margin: 0 0 30px 0;
+    }
+}
+
+.whoweare__items {  
+}
+
+.item-whoweare {
+    display: flex;
+}
+
+.item-whoweare:not(:last-child) {
+    margin: 0 0 30px 0;
+}
+
+.item-whoweare__icon {
+    flex: 0 0 32px;
+}
+
+.item-whoweare__body {
+    flex: 1 1 auto;
+    padding: 0 0 0 20px;
+}
+
+.item-whoweare__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+    letter-spacing: 0.1px;
+}
+
+.item-whoweare__title:not(:last-child) {
+    margin: 0 0 5px 0;
+}
+
+.item-whoweare__text {
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+    color: #737373;
+
+    /*this part is in charge of hiding the text, unnecessary in the future as it can be solved by pagination*/
+    width: 225px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*closing comment*/
 }
