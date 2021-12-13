@@ -161,6 +161,10 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 }
 
 .page__whoweare {
+
+}
+
+.page__clients{
 }
 
 /*---HEADER-BLOCK-------------------------------------*/
@@ -650,6 +654,7 @@ object-position: right; /* helps the image to convey the intended context by adj
 /*---WHO WE ARE-------------------------------------*/
 .whoweare{
     padding: 80px 0 130px 0;
+    background-color: #FFFFFF;
 }
 
 @media (max-width: 950px) {
@@ -808,4 +813,29 @@ object-position: right; /* helps the image to convey the intended context by adj
     overflow: hidden;
     text-overflow: ellipsis;
     /*closing comment*/
+}
+
+/*---CLIENTS-------------------------------------*/
+
+.clients {
+    padding: 58px 0;
+}
+
+.clients__container {
+}
+
+.clients__items {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .clients__items {
+        flex-wrap: wrap;
+    }
+}
+.clients__item {
+    padding: 0 15px;
+    flex: 0 1 16.6667%;
+    text-align: center;
 }
