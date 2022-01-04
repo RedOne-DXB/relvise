@@ -184,11 +184,18 @@ h6 {
   color: #737373;
   font-weight: 600;
   line-height: calc(24 / 14 * 100%);
+  transition: all 0.3s ease 0s;
 }
+
 @media (max-width: 479px) {
   .menu__link {
     font-size: 18px;
   }
+}
+
+.menu__link:hover {
+    color: #4d4b4b;
+    text-decoration: underline;
 }
 /*---PAGE-------------------------------------*/
 .page {
@@ -358,12 +365,23 @@ h6 {
   text-align: center;
   background-color: #ff7b47;
   color: #ffffff;
+  transition: background-color, color 0.3s ease 0s;
+}
+
+.main-block__button-orange:hover {
+    background-color: #ffffff;
+    color: #ff7b47;
 }
 
 .main-block__button-border {
   color: #0d5c63;
   border: 1px solid #0d5c63;
   background-color: transparent;
+}
+
+.main-block__button-border:hover {
+    background-color: #0d5c63;
+    color: #ffffff;
 }
 
 .main-block__image {
@@ -1014,12 +1032,17 @@ h6 {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 5px 5px 0px;
   color: #ffffff;
+  transition: background-color 0.3s ease 0s;
 }
 
 @media (max-width: 810px) {
   .subscribe__button {
     padding: 0 15px;
   }
+}
+
+.subscribe__button:hover {
+    background-color: #f85c1f;
 }
 
 /*---GET IN TOUCH-------------------------------------*/
@@ -1212,4 +1235,174 @@ h6 {
 
 .contact__button:hover {
   background-color: #f85c1f;
+}
+
+/*---FOOTER-------------------------------------*/
+.footer {
+}
+
+.footer__top {
+  padding: 40px 0;
+  background-color: #17213c;
+}
+
+@media (max-width: 767px) {
+    .footer__top {
+        padding: 35px 0;
+    }
+}
+
+.footer__main {
+}
+
+.footer__row {
+  display: flex;
+  margin: 0 -15px;
+}
+
+@media (max-width: 992px) {
+  .footer__row {
+    flex-wrap: wrap;
+    /* min-width: 170px; */
+  }
+}
+
+.footer__column {
+  padding: 10px 15px;
+  flex: 0 1 16.6667%;
+}
+
+.footer__column:last-child {
+  flex: 0 1 33.334%;
+}
+
+@media (max-width: 992px) {
+  .footer__column {
+    flex: 0 1 20%;
+  }
+
+  .footer__column:last-child {
+    flex: 0 1 100%;
+  }
+}
+
+@media (max-width: 601px) {
+    .footer__column {
+        padding: 15px 15px;
+        flex: 0 1 40%;
+      }
+    
+      .footer__column:last-child {
+        flex: 0 1 100%;
+      }
+    }
+}
+
+.footer__label {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(24 / 16 * 100%);
+  letter-spacing: 0.1px;
+  margin: 0 0 20px 0;
+}
+
+.footer__menu {
+}
+
+.menu-footer {
+}
+
+.menu-footer__list {
+}
+
+.menu-footer__item:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+
+.menu-footer__link {
+  color: #ffffff;
+  font-weight: 600;
+  display: inline-block;
+  line-height: calc(24 / 14 * 100%);
+  letter-spacing: 0.2px;
+}
+
+.menu-footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__contacts {
+}
+
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-footer__item {
+  padding: 0 0 0 34px;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  line-height: calc(24 / 14 * 100%);
+  color: #ffffff;
+}
+
+.contacts-footer__item:hover {
+  text-decoration: underline;
+}
+
+.contacts-footer__item:not(:last-child) {
+  margin: 0 0 12px 0;
+}
+.contacts-footer__item_phone {
+  background: url(../images/footer_block/handset.svg) left no-repeat;
+}
+
+.contacts-footer__item_map {
+  background: url(../images/footer_block/navigation.svg) left no-repeat;
+}
+
+.contacts-footer__item_email {
+  background: url(../images/footer_block/telegram.svg) left no-repeat;
+}
+
+.footer__bottom {
+  padding: 25px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+@media (max-width: 767px) {
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer__copy {
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+.footer__copy {
+  font-weight: 600;
+  line-height: calc(24 / 14 * 100%);
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.footer-social.social {
+}
+
+.social__item:not(:last-child) {
+  margin: 0 20px 0 0;
 }
